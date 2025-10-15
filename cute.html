@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Biography</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .profile-pic {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 3px solid #555;
+    }
+    .file-input {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .bio {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .social-links {
+      text-align: center;
+    }
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077b5;
+      font-weight: bold;
+    }
+    .social-links a.youtube {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Biography</h1>
+    <img id="profileImage" src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic"/>
+    <div class="file-input">
+      <input type="file" accept="image/*" onchange="loadImage(event)" />
+    </div>
+    <div class="bio">
+      <p><strong>Name:</strong> Your Name</p>
+      <p><strong>Profession:</strong> Web Developer & Tech Enthusiast</p>
+      <p><strong>About Me:</strong> Passionate about building scalable web applications, exploring new technologies, and sharing knowledge through tutorials and talks.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com/channel/yourchannel" class="youtube" target="_blank">YouTube</a>
+    </div>
+  </div>
+
+  <script>
+    function loadImage(event) {
+      const image = document.getElementById('profileImage');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
+</body>
+</html>
